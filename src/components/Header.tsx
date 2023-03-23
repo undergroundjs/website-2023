@@ -15,5 +15,3 @@ const Header: React.FC = () => {
 };
 
 export default Header;
-
-//className="grow-0 shrink-0 basis-auto
