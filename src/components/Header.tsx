@@ -1,24 +1,19 @@
-import React from 'react';
-import { Link } from 'gatsby';
-
-const headerStyle = {
-    display: "flex",
-    padding: "8px 16px",
-}
-
-const headingStyle = {
-    flex: "0 0 auto",
-    fontWeight: 600,
-    padding: "8px 16px",
-    textDecoration: "none",
-}
+import React from "react";
+import { Link } from "gatsby";
 
 const Header: React.FC = () => {
-    return (
-        <header style={headerStyle}>
-            <Link to="/" style={headingStyle}>UndergroundJS</Link>
-        </header>
-    );
+  return (
+    <header className="flex py-2 px-4">
+      <Link
+        to="/"
+        className="font-semibold grow-0 shrink-0 basis-auto py-2 px-4"
+      >
+        UndergroundJS
+      </Link>
+    </header>
+  );
 };
 
 export default Header;
+
+//className="grow-0 shrink-0 basis-auto
