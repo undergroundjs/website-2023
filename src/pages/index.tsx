@@ -10,7 +10,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <Header />
       <main className="flex-auto">
         <div
-          className="max-w-5xl ml-auto flex-col flex mr-auto p-8 bg-cover bg-center bg-[url('../images/banner-image.jpeg')]"
+          className="max-w-5xl ml-auto flex-col flex mr-auto p-8 bg-cover bg-center bg-hero"
           style={{ minHeight: "500px" }}
         >
           <h1

@@ -12,8 +12,6 @@ A
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
 I
 src/components/Layout.tsx,b/4/b4694ebb3940bc08ad73f040eaf0c8d049cc8dab
-C
-src/pages/index.tsx,d/2/d2d3bb60cab7e8c869b5fdf0a820b7edf2fc7859
 L
 src/components/Container.tsx,1/f/1f4c1ef71674ecadc676ade3d609be8a7c013276
 M
@@ -26,7 +24,3 @@ C
 src/pages/about.tsx,0/0/00f529562c859ca33a4a6ef004ea5b949fd46cc7
 I
 src/components/Footer.tsx,6/a/6a1906fbef47b21e13258a3accfe644e256f3344
-E
-src/styles/global.css,3/e/3ea85257d8c74ab2f79dac9121fc26edb558777a
-H
-src/pages/sponsoring.tsx,4/3/43fb0026976bf79d8287d5da39373a596eeeaa1c
