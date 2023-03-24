@@ -65,7 +65,7 @@ const BecomeASponsorPage: React.FC<PageProps> = () => {
           <p className="text-center italic px-1 py-2">$0</p>
           <p className="px-1 py-2">Limited to</p>
           <p className="text-center bg-[#f5b004] px-1 py-2">1</p>
-          <p className="text-center px-1 py-2">4</p>
+          <p className="text-center px-1 py-2">3</p>
           <p className="text-center px-1 py-2">3</p>
           <p className="text-center px-1 py-2">&infin;</p>
           <p className="bg-[#f5b004] px-1 py-2">Branding in conference media</p>
