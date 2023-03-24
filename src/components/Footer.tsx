@@ -8,10 +8,17 @@ const Footer: React.FC = () => {
       <div className="w-full max-w-5xl min-w-0 mx-auto p-8">
         <div className="mx-3 flex justify-center">
           <div className="mr-auto w-32">
-            <Link to="https://2019.undergroundjs.com">2019 Archive</Link>
+            <Link
+              className="no-underline text-black"
+              to="https://2019.undergroundjs.com"
+            >
+              2019 Archive
+            </Link>
           </div>
           <div>
-            <Link to="/code-of-conduct">Code of Conduct</Link>
+            <Link className="no-underline text-black" to="/code-of-conduct">
+              Code of Conduct
+            </Link>
           </div>
           <div className="flex ml-auto w-32">
             <Link
@@ -19,7 +26,7 @@ const Footer: React.FC = () => {
               to="https://twitter.com/undergroundjs"
               className="ml-auto"
             >
-              <Twitter />
+              <Twitter color="black" />
             </Link>
           </div>
         </div>
