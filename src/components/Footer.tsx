@@ -30,8 +30,16 @@ const Footer: React.FC = () => {
             </Link>
           </div>
         </div>
-        <div className="m-3">
-          <p className="text-center text-xs">© 2023 UndergroundJS, Inc.</p>
+        <div className="flex justify-center m-3">
+          <p className="text-xs">© 2023 UndergroundJS, Inc.</p>
+        </div>
+        <div className="flex justify-center m-3">
+          <a href="https://www.netlify.com">
+            <img
+              src="https://www.netlify.com/v3/img/components/netlify-color-bg.svg"
+              alt="Deploys by Netlify"
+            />
+          </a>
         </div>
       </div>
     </footer>
