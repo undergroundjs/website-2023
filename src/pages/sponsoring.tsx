@@ -14,7 +14,7 @@ const BecomeASponsorPage: React.FC<PageProps> = () => {
       <Container>
         <h2>Sponsoring</h2>
         <p className="mb-8">
-          UndergroundJS will bring together 250 of Nashville's talented
+          UndergroundJS will bring together 150 of Nashville's talented
           developer market to share with them some of most amazing things
           happening in our community. From side project and multi-team efforts
           to community involvement and personal growth.
