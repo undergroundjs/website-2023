@@ -22,7 +22,7 @@ const AboutPage: React.FC<PageProps> = () => {
           with years of pent up excitement and energy.
         </p>
         <p className="mb-8">
-          Underground JS is a nonprofit event facilitated by TechFed Nashville,
+          UndergroundJS is a nonprofit event facilitated by TechFed Nashville,
           a Tennessee nonprofit organization whose mission is to support and
           grow the grassroots tech talent in Middle Tennessee through
           educational events and groups. TechFed provides financial stewardship,
