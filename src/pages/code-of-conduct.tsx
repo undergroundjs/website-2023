@@ -25,9 +25,6 @@ const CodeOfConductPage: React.FC<PageProps> = () => {
             incidents@undergroundjs.com
           </a>
         </p>
-        <p className="mb-8">
-          Or, call or text us at <a href="tel:901-295-8011">901-295-8011</a>
-        </p>
         <h3 className="text-black">The Quick Version</h3>
         <p className="mb-8">
           Our conference is dedicated to providing a harassment-free conference
