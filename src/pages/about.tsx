@@ -45,6 +45,11 @@ const AboutPage: React.FC<PageProps> = () => {
               Seth Alexander
             </a>
           </li>
+          <li>
+            <a href="https://www.linkedin.com/in/jeromehardaway/">
+              Jerome Hardaway
+            </a>
+          </li>
           More to come...
         </ul>
       </Container>
