@@ -1,44 +1,35 @@
 import React from "react";
 import { Link } from "gatsby";
 import { Twitter } from "react-feather";
+import LogoSmall from "../images/ugjs-logo-sm.png";
+import TwitterLogo from "../images/twitter-icon.png";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="min-w-0 flex py-4">
-      <div className="w-full max-w-5xl min-w-0 mx-auto p-8">
-        <div className="mx-3 flex justify-center">
-          <div className="mr-auto w-32">
-            <Link
-              className="no-underline text-black"
-              to="https://2019.undergroundjs.com"
-            >
-              2019 Archive
-            </Link>
+    <footer>
+      <div style={{ backgroundColor: "#000", padding: "32px 24px" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+            color: "#fff",
+          }}
+        >
+          <img src={LogoSmall} style={{ height: "48px" }} />
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <a href="/code-of-conduct">Code of Conduct</a>
+            <p>UndergroundJS, 2023</p>
           </div>
-          <div>
-            <Link className="no-underline text-black" to="/code-of-conduct">
-              Code of Conduct
-            </Link>
-          </div>
-          <div className="flex ml-auto w-32">
-            <Link
-              title="Follow us on Twitter"
-              to="https://twitter.com/undergroundjs"
-              className="ml-auto"
-            >
-              <Twitter color="black" />
-            </Link>
-          </div>
-        </div>
-        <div className="flex justify-center m-3">
-          <p className="text-xs">© 2023 UndergroundJS, Inc.</p>
-        </div>
-        <div className="flex justify-center m-3">
-          <a href="https://www.netlify.com">
-            <img
-              src="https://www.netlify.com/v3/img/components/netlify-color-bg.svg"
-              alt="Deploys by Netlify"
-            />
+          <a href="https://twitter.com/undergroundjs">
+            <img src={TwitterLogo} style={{ height: "48px" }} />
           </a>
         </div>
       </div>

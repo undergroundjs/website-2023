@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import Layout from "../components/Layout";
+import SkylineSvg from "../images/ugjs-skyline.svg";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -8,18 +9,34 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <Header />
-      <main className="flex-auto">
+      <div
+        style={{
+          minHeight: 320,
+          position: "relative",
+          color: "#000",
+          backgroundImage: `linear-gradient(0, #f4b004, #f78604)`,
+        }}
+      >
         <div
-          className="max-w-5xl ml-auto flex-col flex mr-auto p-8 bg-cover bg-center bg-hero"
-          style={{ minHeight: "500px" }}
-        >
-          <h1
-            className="text-center text-white my-auto text-5xl"
-            style={{ textShadow: "0px 0px 5px black" }}
-          >
-            JavaScript conference hosted in Nashville.
-          </h1>
+          style={{
+            backgroundImage: `url(${SkylineSvg})`,
+            position: "absolute",
+            height: "100%",
+            width: "100%",
+            bottom: "-14px",
+            backgroundRepeat: "no-repeat",
+            zIndex: 0,
+            display: "none", // TODO: fix skyline so that it fix properly and doesn't cover and resize weirdly
+          }}
+        ></div>
+        <div style={{ zIndex: 1 }}>
+          <h1 style={{ color: "#000" }}>Content</h1>
+          <h2 style={{ color: "#000" }}>Subcontent</h2>
+          <h3 style={{ color: "#000" }}>Call to Action Btn</h3>
         </div>
+      </div>
+      <main style={{ height: "800px", padding: "24px 16px" }}>
+        <h1>Main Page content</h1>
       </main>
       <Footer />
     </Layout>
