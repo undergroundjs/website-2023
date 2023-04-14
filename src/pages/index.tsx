@@ -35,7 +35,7 @@ const IndexPage: React.FC<PageProps> = () => {
               fontSize: "1.2rem",
             }}
           >
-            <h3>Sept 28, 2023</h3>
+            <h3>Sept 21, 2023</h3>
             <p>Rocketown</p>
             <p>Nashville</p>
           </div>
