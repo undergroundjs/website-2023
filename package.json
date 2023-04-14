@@ -15,6 +15,7 @@
   "dependencies": {
     "@react-hook/window-size": "^3.1.1",
     "gatsby": "^5.7.0",
+    "gatsby-plugin-google-analytics": "^5.8.0",
     "gatsby-plugin-image": "^3.7.0",
     "gatsby-plugin-sharp": "^5.7.0",
     "gatsby-plugin-sitemap": "^6.7.0",

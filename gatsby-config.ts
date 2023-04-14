@@ -22,6 +22,13 @@ const config: GatsbyConfig = {
         "path": "./src/images/"
       },
       __key: "images"
+    },
+
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-138176222-1',
+      },
     }
   ]
 };
