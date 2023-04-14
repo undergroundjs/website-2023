@@ -15,7 +15,7 @@ const menuItemStyleCollapsed: React.CSSProperties = {
 };
 
 type MenuState = "full" | "collapsed" | "open";
-const windowMinForFull = 720;
+const windowMinForFull = 480;
 
 const setMenuBasedOnWindow = (
   windowWidth: number,
@@ -34,11 +34,11 @@ const setMenuBasedOnWindow = (
 const menuItems = [
   { text: "Home", url: "/" },
   { text: "About", url: "/about" },
-  { text: "Speakers", url: "/speakers" },
-  { text: "Venue", url: "/venue" },
-  { text: "Sponsors", url: "/sponsors" },
-  { text: "Schedule", url: "/schedule" },
-  { text: "Faq", url: "/faq" },
+  // { text: "Speakers", url: "/speakers" },
+  // { text: "Venue", url: "/venue" },
+  { text: "Sponsors", url: "/sponsoring" },
+  // { text: "Schedule", url: "/schedule" },
+  // { text: "Faq", url: "/faq" },
   { text: "Contact", url: "/contact" },
 ];
 
