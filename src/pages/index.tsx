@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import SkylineSvg from "../images/ugjs-skyline.svg";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Container from "../components/Container";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -35,9 +36,9 @@ const IndexPage: React.FC<PageProps> = () => {
           <h3 style={{ color: "#000" }}>Call to Action Btn</h3>
         </div>
       </div>
-      <main style={{ height: "800px", padding: "24px 16px" }}>
+      <Container>
         <h1>Main Page content</h1>
-      </main>
+      </Container>
       <Footer />
     </Layout>
   );
