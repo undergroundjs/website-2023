@@ -1,5 +1,4 @@
 import { graphql, useStaticQuery } from "gatsby";
-import Site = Queries.Site;
 
 const SITE_METADATA_QUERY = graphql`
   query {
