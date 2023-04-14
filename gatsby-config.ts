@@ -5,7 +5,7 @@ const config: GatsbyConfig = {
     title: `UndergroundJS`,
     description: `Nashville's ultimate JavaScript event on September 21, 2023! The single-track conference focuses on JavaScript & the Nashville dev community.`,
     twitterUsername: `@undergroundjs`,
-    image: `/assets/banner-image.jpeg`,
+    image: `/images/banner-image.jpeg`,
     siteUrl: `https://undergroundjs.com`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
