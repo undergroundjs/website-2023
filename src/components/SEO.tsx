@@ -48,11 +48,7 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
       <meta name="twitter:creator" content={seo.twitterUsername} />
-      <link
-        rel="icon"
-        type="image/png"
-        href="/images/favicons/favicon-32x32.png"
-      />
+      <link rel="icon" type="image/png" href="/favicon-32x32.png" />
       {children}
     </>
   );

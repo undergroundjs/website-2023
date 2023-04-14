@@ -5,7 +5,7 @@ const config: GatsbyConfig = {
     title: `UndergroundJS`,
     description: `Nashville's ultimate JavaScript event on September 21, 2023! The single-track conference focuses on JavaScript & the Nashville dev community.`,
     twitterUsername: `@undergroundjs`,
-    image: `/images/banner-image.jpeg`,
+    image: `/banner-image.jpeg`,
     siteUrl: `https://undergroundjs.com`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
@@ -19,14 +19,6 @@ const config: GatsbyConfig = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-remove-serviceworker",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: "./src/images/",
-      },
-      __key: "images",
-    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
