@@ -39,7 +39,7 @@ const menuItems = [
   { text: "Sponsors", url: "/sponsoring" },
   // { text: "Schedule", url: "/schedule" },
   // { text: "Faq", url: "/faq" },
-  { text: "Contact", url: "/contact" },
+  // { text: "Contact", url: "/contact" },
 ];
 
 const getMenuStyle = (menuState: MenuState): React.CSSProperties => {
