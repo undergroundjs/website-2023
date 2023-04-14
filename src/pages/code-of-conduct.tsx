@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import Container from "../components/Container";
 import Hero from "../components/Hero";
 import Heading from "../components/Heading";
+import { SEO } from "../components/SEO";
 
 const CodeOfConductPage: React.FC<PageProps> = () => {
   return (
@@ -107,4 +108,4 @@ const CodeOfConductPage: React.FC<PageProps> = () => {
 
 export default CodeOfConductPage;
 
-export const Head: HeadFC = () => <title>Code of Conduct</title>;
+export const Head: HeadFC = () => <SEO title="Code of Conduct" />;

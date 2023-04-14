@@ -2,8 +2,11 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `UndegroundJS`,
-    siteUrl: `https://undergroundjs.com`
+    title: `UndergroundJS`,
+    description: `Nashville's ultimate JavaScript event on September 21, 2023! The single-track conference focuses on JavaScript & the Nashville dev community.`,
+    twitterUsername: `@undergroundjs`,
+    image: `./src/images/ugjs-logo-sm-color.png`,
+    siteUrl: `https://undergroundjs.com`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -11,27 +14,27 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     "gatsby-plugin-image",
-    'gatsby-plugin-postcss',
+    "gatsby-plugin-postcss",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-remove-serviceworker",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        "name": "images",
-        "path": "./src/images/"
+        name: "images",
+        path: "./src/images/",
       },
-      __key: "images"
+      __key: "images",
     },
 
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'UA-138176222-1',
+        trackingId: "UA-138176222-1",
       },
-    }
-  ]
+    },
+  ],
 };
 
 export default config;

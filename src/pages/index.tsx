@@ -1,5 +1,5 @@
 import * as React from "react";
-import { HeadFC, Link, PageProps } from "gatsby";
+import { HeadFC, PageProps } from "gatsby";
 import Layout from "../components/Layout";
 import LogoLarge from "../images/ugjs-logo-large.png";
 import Header from "../components/Header";
@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import Container from "../components/Container";
 import Hero from "../components/Hero";
 import Button from "../components/Button";
+import { SEO } from "../components/SEO";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -88,4 +89,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>UndergroundJS</title>;
+export const Head: HeadFC = () => <SEO />;

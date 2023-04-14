@@ -7,6 +7,7 @@ import Container from "../components/Container";
 import Hero from "../components/Hero";
 import Button from "../components/Button";
 import Heading from "../components/Heading";
+import { SEO } from "../components/SEO";
 
 const AboutPage: React.FC<PageProps> = () => {
   return (
@@ -90,4 +91,4 @@ const AboutPage: React.FC<PageProps> = () => {
 
 export default AboutPage;
 
-export const Head: HeadFC = () => <title>About</title>;
+export const Head: HeadFC = () => <SEO title="About" />;

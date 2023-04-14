@@ -1,6 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
-import { Twitter } from "react-feather";
 import LogoSmall from "../images/ugjs-logo-sm.png";
 import TwitterLogo from "../images/twitter-icon.png";
 
