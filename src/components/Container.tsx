@@ -6,8 +6,10 @@ type Props = {
 
 const Container: React.FC<Props> = ({ children }) => {
   return (
-    <main className="w-100 max-w-5xl ml-auto mr-auto p-8 flex-auto">
-      {children}
+    <main className="p-8 bg-white">
+      <div className="w-100 max-w-5xl ml-auto mr-auto flex-auto ">
+        {children}
+      </div>
     </main>
   );
 };

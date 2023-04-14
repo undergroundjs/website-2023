@@ -1,29 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  body {
+    background-color: #000;
+  }
   h1 {
     @apply text-6xl font-black leading-tight mb-8;
-    color: #f48705;
   }
   h2 {
     @apply text-5xl font-black leading-tight mb-4;
-    color: #f48705;
   }
   h3 {
     @apply text-3xl font-black leading-tight;
-    color: #f48705;
   }
   h4 {
     @apply text-xl font-black leading-tight;
-    color: #f48705;
   }
   a {
     @apply underline;
-    color: #f48705;
-  }
-  a:hover {
-    color: #f5b004;
   }
 }

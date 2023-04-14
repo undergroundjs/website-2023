@@ -4,20 +4,32 @@ import Layout from "../components/Layout";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Container from "../components/Container";
+import Hero from "../components/Hero";
+import Heading from "../components/Heading";
 
 const CodeOfConductPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <Header />
-      <Container>
-        <h2>Code of Conduct</h2>
-        <p className="mb-8">
+      <Hero>
+        <Heading>Code of Conduct</Heading>
+        <p
+          style={{
+            maxWidth: "50%",
+            margin: "auto",
+            textAlign: "center",
+            fontWeight: "bold",
+            padding: "0rem 0 2rem",
+          }}
+        >
           All attendees, speakers, sponsors and volunteers at our conference are
           required to agree with the following code of conduct. Organizers will
           enforce this code throughout the event. We are expecting cooperation
           from all participants to help ensuring a safe environment for
           everybody.
         </p>
+      </Hero>
+      <Container>
         <h2>Need Help?</h2>
         <p className="mb-8">
           Email us at{" "}
