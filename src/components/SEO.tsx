@@ -22,7 +22,7 @@ export const SEO: React.FC<SEOProps> = ({
   } = useSiteMetadata();
 
   const seo = {
-    title: `${title} - UndergroundJS` || defaultTitle,
+    title: title ? `${title} - UndergroundJS` : defaultTitle,
     description: description || defaultDescription,
     image: `${siteUrl}${image}`,
     url: `${siteUrl}${pathname || ``}`,
