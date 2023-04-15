@@ -1,7 +1,6 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import { Link } from "gatsby";
-import { Check } from "react-feather";
 import Layout from "../components/Layout";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -9,6 +8,7 @@ import Container from "../components/Container";
 import Hero from "../components/Hero";
 import Heading from "../components/Heading";
 import Button from "../components/Button";
+import { SEO } from "../components/SEO";
 
 const BecomeASponsorPage: React.FC<PageProps> = () => {
   return (
@@ -122,4 +122,4 @@ const BecomeASponsorPage: React.FC<PageProps> = () => {
 
 export default BecomeASponsorPage;
 
-export const Head: HeadFC = () => <title>Become A Sponsor</title>;
+export const Head: HeadFC = () => <SEO title="Become A Sponsor" />;

@@ -3,6 +3,7 @@ import { Link, HeadFC, PageProps } from "gatsby";
 import { Layout } from "react-feather";
 import Header from "../components/Header";
 import Container from "../components/Container";
+import { SEO } from "../components/SEO";
 
 const headingStyles = {
   marginTop: 0,
@@ -47,4 +48,4 @@ const NotFoundPage: React.FC<PageProps> = () => {
 
 export default NotFoundPage;
 
-export const Head: HeadFC = () => <title>Not found</title>;
+export const Head: HeadFC = () => <SEO title="Not Found" />;
