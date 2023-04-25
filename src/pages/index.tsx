@@ -8,8 +8,19 @@ import Container from "../components/Container";
 import Hero from "../components/Hero";
 import Button from "../components/Button";
 import { SEO } from "../components/SEO";
+import { Script } from "gatsby";
 
 const IndexPage: React.FC<PageProps> = () => {
+  React.useEffect(() => {
+    console.log("useEffect", window);
+    window.EBWidgets?.createWidget({
+      widgetType: "checkout",
+      eventId: "595969038437",
+      modal: true,
+      modalTriggerElementId: "eventbrite-widget-modal-trigger-595969038437",
+    });
+  }, []);
+
   return (
     <Layout>
       <Header />
@@ -49,8 +60,12 @@ const IndexPage: React.FC<PageProps> = () => {
               textAlign: "center",
             }}
           >
-            <Button to="https://www.eventbrite.com/e/595969038437/">
-              Register
+            <Button
+              id="eventbrite-widget-modal-trigger-595969038437"
+              type="button"
+              to="https://www.eventbrite.com/e/undergroundjs-2023-tickets-595969038437"
+            >
+              Buy Tickets
             </Button>
           </div>
         </div>
@@ -89,4 +104,9 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <SEO />;
+export const Head: HeadFC = () => (
+  <>
+    <SEO />
+    <Script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></Script>
+  </>
+);
