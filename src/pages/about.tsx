@@ -8,6 +8,7 @@ import Hero from "../components/Hero";
 import Button from "../components/Button";
 import Heading from "../components/Heading";
 import { SEO } from "../components/SEO";
+import SponsorList from "../components/SponsorList";
 
 const AboutPage: React.FC<PageProps> = () => {
   return (
@@ -84,6 +85,7 @@ const AboutPage: React.FC<PageProps> = () => {
           </li>
         </ul>
       </Container>
+      <SponsorList />
       <Footer />
     </Layout>
   );

@@ -4,6 +4,7 @@ import { Layout } from "react-feather";
 import Header from "../components/Header";
 import Container from "../components/Container";
 import { SEO } from "../components/SEO";
+import SponsorList from "../components/SponsorList";
 
 const headingStyles = {
   marginTop: 0,
@@ -42,6 +43,7 @@ const NotFoundPage: React.FC<PageProps> = () => {
           <Link to="/">Go home</Link>.
         </p>
       </Container>
+      <SponsorList />
     </Layout>
   );
 };
