@@ -1,5 +1,5 @@
 import React from "react";
-import { Speaker } from "../data/speakers";
+import { Speaker } from "../types/speakers";
 import SocialIcon from "./SocialIcon";
 const speakerContainer: React.CSSProperties = {
   position: "relative",

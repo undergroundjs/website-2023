@@ -1,6 +1,6 @@
 import React from "react";
 import { Twitter, Linkedin } from "react-feather";
-import { SpeakerLinks } from "../data/speakers";
+import { SpeakerLinks } from "../types/speakers";
 
 const socialIconLookup = {
   Twitter,

@@ -1,5 +1,5 @@
 import React from "react";
-import { Speaker } from "../data/speakers";
+import { Speaker } from "../types/speakers";
 import { useWindowWidth } from "@react-hook/window-size";
 import SocialIcon from "./SocialIcon";
 
