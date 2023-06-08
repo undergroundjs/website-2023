@@ -1,5 +1,5 @@
 import * as React from "react";
-import { HeadFC, PageProps } from "gatsby";
+import { HeadFC, PageProps, StaticQuery, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import LogoLarge from "../images/ugjs-logo-large.png";
 import Header from "../components/Header";
@@ -8,6 +8,19 @@ import Container from "../components/Container";
 import Hero from "../components/Hero";
 import Button from "../components/Button";
 import { SEO } from "../components/SEO";
+import { Speaker } from "./speakers";
+import SpeakerImage from "../components/SpeakerImage";
+
+function getRandomSpeakerIndex(max: number) {
+  const min = 0;
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+}
+
+const featureSpeakersContainer: React.CSSProperties = {
+  display: "flex",
+  flexDirection: "row",
+};
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -64,23 +77,43 @@ const IndexPage: React.FC<PageProps> = () => {
           with years of pent up excitement and energy.
         </p>
 
-        <h3>Call for Speakers</h3>
+        <h3>Featured Speakers</h3>
 
-        <p className="mb-8 mt-8">
-          We are looking for new and experienced speakers that share a love for
-          JavaScript and the Nashville community to present. Our team is
-          available to help create and prepare presentation with speakers.
-        </p>
-        <div
-          style={{ textAlign: "center", width: "100%", marginBottom: "1rem" }}
-        >
-          <Button
-            to="https://www.papercall.io/undergroundjs-2023"
-            style={{ background: "#f78604", color: "#fff" }}
-          >
-            Present
-          </Button>
-        </div>
+        <StaticQuery
+          query={graphql`
+            query GetSpeakersPageData {
+              allSpeakersJson {
+                nodes {
+                  name
+                  avatar
+                  title
+                  twitter
+                }
+              }
+            }
+          `}
+          render={(data) => {
+            const speakerList: Partial<Speaker>[] = data.allSpeakersJson.nodes;
+            const featureSpeakerCount = 4;
+            const randomNums: number[] = Array.from({
+              length: featureSpeakerCount,
+            }).map((_val, _index, currArr) => {
+              let randomIndex = 0;
+              do {
+                randomIndex = getRandomSpeakerIndex(speakerList.length);
+              } while (currArr.includes(randomIndex)); // loop until it is not in list already.
+              return randomIndex;
+            });
+            const speakerComponents = speakerList
+              .filter((_, index) => randomNums.includes(index))
+              .map((speaker: Partial<Speaker>) => (
+                <SpeakerImage {...speaker} />
+              ));
+            return (
+              <div style={featureSpeakersContainer}>{speakerComponents}</div>
+            );
+          }}
+        />
       </Container>
       <Footer />
     </Layout>

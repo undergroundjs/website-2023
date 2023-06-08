@@ -34,7 +34,7 @@ const setMenuBasedOnWindow = (
 const menuItems = [
   { text: "Home", url: "/" },
   { text: "About", url: "/about" },
-  // { text: "Speakers", url: "/speakers" },
+  { text: "Speakers", url: "/speakers" },
   // { text: "Venue", url: "/venue" },
   { text: "Sponsors", url: "/sponsoring" },
   { text: "CFP", url: "https://www.papercall.io/undergroundjs-2023" },
