@@ -18,11 +18,19 @@ const config: GatsbyConfig = {
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-transformer-json",
     "gatsby-plugin-remove-serviceworker",
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-138176222-1",
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "speakers",
+        path: `${__dirname}/src/data/speakers.json`,
       },
     },
   ],
