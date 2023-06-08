@@ -49,15 +49,15 @@ const socialLinkContainer: React.CSSProperties = {
 
 const socialIconLimit = 2;
 
-const SpeakerImage: React.FC<Speaker> = ({
-  imageUrl,
+const SpeakerImage: React.FC<Partial<Speaker>> = ({
+  avatar,
   name,
   title,
-  socialLinks,
+  twitter,
 }) => {
   return (
     <div style={speakerContainer} className="group">
-      <img src={imageUrl} style={speakerImgStyles} />
+      <img src={avatar} style={speakerImgStyles} />
       <div style={speakerNameContainer} className="hidden group-hover:block">
         <div style={speakerNameOverlay} />
         <div style={speakerNameTextContainer}>
@@ -65,9 +65,7 @@ const SpeakerImage: React.FC<Speaker> = ({
 
           <h4 style={{ fontSize: ".7rem" }}>{title}</h4>
           <div style={socialLinkContainer}>
-            {socialLinks.map((link, index) =>
-              index < socialIconLimit ? <SocialIcon {...link} /> : null
-            )}
+            {twitter ? <SocialIcon icon="Twitter" url={twitter} /> : null}
           </div>
         </div>
       </div>

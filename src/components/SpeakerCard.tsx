@@ -22,12 +22,12 @@ const speakerSocialLink: React.CSSProperties = {
 
 const windowMobileWidth = 640;
 
-const SpeakerCard: React.FC<Speaker> = ({
-  imageUrl,
+const SpeakerCard: React.FC<Partial<Speaker>> = ({
+  avatar,
   name,
   title,
   abstract,
-  socialLinks,
+  twitter,
 }) => {
   const windowWidth = useWindowWidth();
   const [isMobile, setIsMobile] = React.useState<boolean>(
@@ -45,13 +45,11 @@ const SpeakerCard: React.FC<Speaker> = ({
   };
   return (
     <div style={speakerContainer}>
-      <img src={imageUrl} style={speakerImgStyles} />
+      <img src={avatar} style={speakerImgStyles} />
       <div>
         <div style={speakerNameContainer}>
           <h3 style={{ marginRight: "1rem" }}>{name}</h3>
-          {socialLinks.map((link, index) => (
-            <SocialIcon {...link} />
-          ))}
+          {twitter ? <SocialIcon icon="Twitter" link={twitter} /> : null}
         </div>
         <h4>{title}</h4>
         <p>{abstract}</p>

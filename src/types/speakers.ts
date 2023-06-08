@@ -1,12 +1,11 @@
-export type SpeakerLinks = {
-  icon: "Twitter" | "Linkedin";
-  link: string;
-};
-
 export type Speaker = {
   name: string;
-  imageUrl: string;
+  avatar: string;
+  bio: string;
+  url: string;
+  organization: string;
   title: string;
   abstract: string;
-  socialLinks: SpeakerLinks[];
+  description: string;
+  twitter: string;
 };
