@@ -9,6 +9,7 @@ import Hero from "../components/Hero";
 import Heading from "../components/Heading";
 import Button from "../components/Button";
 import { SEO } from "../components/SEO";
+import SponsorList from "../components/SponsorList";
 
 const BecomeASponsorPage: React.FC<PageProps> = () => {
   return (
@@ -115,6 +116,7 @@ const BecomeASponsorPage: React.FC<PageProps> = () => {
           </Button>
         </div>
       </Container>
+      <SponsorList />
       <Footer />
     </Layout>
   );

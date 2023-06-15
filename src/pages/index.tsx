@@ -8,6 +8,7 @@ import Container from "../components/Container";
 import Hero from "../components/Hero";
 import Button from "../components/Button";
 import { SEO } from "../components/SEO";
+import SponsorList from "../components/SponsorList";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -82,6 +83,7 @@ const IndexPage: React.FC<PageProps> = () => {
           </Button>
         </div>
       </Container>
+      <SponsorList />
       <Footer />
     </Layout>
   );
