@@ -114,7 +114,6 @@ const IndexPage: React.FC<PageProps> = () => {
               featureSpeakerCount,
               speakerList.length
             );
-            console.log({ featureSpeakerCount, randomNums });
             const speakerComponents = speakerList
               .filter((_, index) => randomNums.includes(index))
               .map((speaker) => (

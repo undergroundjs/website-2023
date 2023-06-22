@@ -2,7 +2,7 @@
   "name": "undeground-js",
   "version": "1.0.0",
   "private": true,
-  "description": "undeground-js",
+  "description": "underground-js",
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",

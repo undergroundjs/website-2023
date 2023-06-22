@@ -53,12 +53,7 @@ const SpeakerCard: React.FC<Partial<Speaker>> = ({
       <div>
         <div style={speakerNameContainer}>
           <h3 style={{ marginRight: "1rem" }}>{name}</h3>
-          {twitter ? (
-            <SocialIcon
-              icon="Twitter"
-              link={`https://twitter.com/${twitter}`}
-            />
-          ) : null}
+          {twitter ? <SocialIcon icon="Twitter" slug={twitter} /> : null}
         </div>
         <h4>{title}</h4>
         <p>{abstract}</p>

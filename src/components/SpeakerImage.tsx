@@ -55,8 +55,6 @@ const socialLinkContainer: React.CSSProperties = {
   marginTop: "8px",
 };
 
-const socialIconLimit = 2;
-
 const SpeakerImage: React.FC<Partial<Speaker>> = ({
   avatar,
   name,
@@ -73,7 +71,7 @@ const SpeakerImage: React.FC<Partial<Speaker>> = ({
 
           <h4 style={{ fontSize: ".7rem" }}>{title}</h4>
           <div style={socialLinkContainer}>
-            {twitter ? <SocialIcon icon="Twitter" url={twitter} /> : null}
+            {twitter ? <SocialIcon icon="Twitter" slug={twitter} /> : null}
           </div>
         </div>
       </div>
