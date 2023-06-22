@@ -4,7 +4,11 @@ import SocialIcon from "./SocialIcon";
 const speakerContainer: React.CSSProperties = {
   position: "relative",
   height: 150,
+  maxHeight: 150,
+  minHeight: 150,
   width: 150,
+  minWidth: 150,
+  maxWidth: 150,
   borderRadius: "50%",
   marginRight: "2rem",
   marginBottom: "2rem",
@@ -13,7 +17,11 @@ const speakerContainer: React.CSSProperties = {
 
 const speakerImgStyles: React.CSSProperties = {
   height: 150,
+  maxHeight: 150,
+  minHeight: 150,
   width: 150,
+  minWidth: 150,
+  maxWidth: 150,
   borderRadius: "50%",
   marginRight: "2rem",
 };

@@ -1,8 +1,8 @@
 import React from "react";
-import { Twitter, Linkedin } from "react-feather";
+import { Twitter, Linkedin, Icon } from "react-feather";
 import { SpeakerLinks } from "../types/speakers";
 
-const socialIconLookup = {
+const socialIconLookup: Record<string, Icon> = {
   Twitter,
   Linkedin,
 };

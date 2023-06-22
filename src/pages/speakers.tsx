@@ -8,41 +8,8 @@ import Hero from "../components/Hero";
 import { SEO } from "../components/SEO";
 import Heading from "../components/Heading";
 import SpeakerCard from "../components/SpeakerCard";
-import SpeakerImage from "../components/SpeakerImage";
+import { Speaker } from "../types/speakers";
 
-export type SpeakerLinks = {
-  icon: "Twitter" | "Linkedin";
-  link: string;
-};
-
-export type Speaker = {
-  name: string;
-  imageUrl: string;
-  title: string;
-  abstract: string;
-  socialLinks: SpeakerLinks[];
-};
-
-const speakers: Speaker[] = [
-  {
-    name: "Ejiro Asiuwhu",
-    imageUrl:
-      "https://pbs.twimg.com/profile_images/1490642733291257858/y_SnRmrj_400x400.jpg",
-    title: "End-to-end type safety with Nuxt 3",
-    abstract:
-      "Create type-safe full-stack apps with Nuxt 3 while prioritizing developer experience. Ensure type soundness and avoid runtime errors. With Nuxt 3’s ecosystem, build scalable and robust applications easily. Elevate your development skills and create reliable apps",
-    socialLinks: [
-      {
-        icon: "Twitter",
-        link: "https://twitter.com/ejirocodes",
-      },
-      {
-        icon: "Linkedin",
-        link: "https://www.linkedin.com/in/ejiro-asiuwhu",
-      },
-    ],
-  },
-];
 const SpeakersPage: React.FC<PageProps> = () => {
   return (
     <Layout>

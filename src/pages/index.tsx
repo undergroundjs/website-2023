@@ -8,20 +8,33 @@ import Container from "../components/Container";
 import Hero from "../components/Hero";
 import Button from "../components/Button";
 import { SEO } from "../components/SEO";
-import { Speaker } from "./speakers";
 import SpeakerImage from "../components/SpeakerImage";
 import SponsorList from "../components/SponsorList";
+import { Speaker } from "../types/speakers";
 
-
-function getRandomSpeakerIndex(max: number) {
+function getRandomNumber(max: number) {
   const min = 0;
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
 }
 
+function getRandomNumberArray(count: number, max: number) {
+  const returnArray: number[] = [];
+  while (returnArray.length < count) {
+    let randomNum = getRandomNumber(max);
+    if (!returnArray.includes(randomNum)) {
+      returnArray.push(randomNum);
+    }
+  }
+  return returnArray;
+}
+
 const featureSpeakersContainer: React.CSSProperties = {
+  padding: "2rem 0",
   display: "flex",
   flexDirection: "row",
+  justifyContent: "space-around",
+  flexWrap: "wrap",
 };
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -83,7 +96,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
         <StaticQuery
           query={graphql`
-            query GetSpeakersPageData {
+            query GetFeaturedSpeakersPageData {
               allSpeakersJson {
                 nodes {
                   name
@@ -97,19 +110,15 @@ const IndexPage: React.FC<PageProps> = () => {
           render={(data) => {
             const speakerList: Partial<Speaker>[] = data.allSpeakersJson.nodes;
             const featureSpeakerCount = 4;
-            const randomNums: number[] = Array.from({
-              length: featureSpeakerCount,
-            }).map((_val, _index, currArr) => {
-              let randomIndex = 0;
-              do {
-                randomIndex = getRandomSpeakerIndex(speakerList.length);
-              } while (currArr.includes(randomIndex)); // loop until it is not in list already.
-              return randomIndex;
-            });
+            const randomNums = getRandomNumberArray(
+              featureSpeakerCount,
+              speakerList.length
+            );
+            console.log({ featureSpeakerCount, randomNums });
             const speakerComponents = speakerList
               .filter((_, index) => randomNums.includes(index))
-              .map((speaker: Partial<Speaker>) => (
-                <SpeakerImage {...speaker} />
+              .map((speaker) => (
+                <SpeakerImage key={speaker.name} {...speaker} />
               ));
             return (
               <div style={featureSpeakersContainer}>{speakerComponents}</div>
