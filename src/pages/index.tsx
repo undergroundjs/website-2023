@@ -10,6 +10,8 @@ import Button from "../components/Button";
 import { SEO } from "../components/SEO";
 import { Speaker } from "./speakers";
 import SpeakerImage from "../components/SpeakerImage";
+import SponsorList from "../components/SponsorList";
+
 
 function getRandomSpeakerIndex(max: number) {
   const min = 0;
@@ -115,6 +117,7 @@ const IndexPage: React.FC<PageProps> = () => {
           }}
         />
       </Container>
+      <SponsorList />
       <Footer />
     </Layout>
   );
