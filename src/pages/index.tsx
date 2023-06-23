@@ -1,5 +1,5 @@
 import * as React from "react";
-import { HeadFC, PageProps } from "gatsby";
+import { HeadFC, PageProps, StaticQuery, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import LogoLarge from "../images/ugjs-logo-large.png";
 import Header from "../components/Header";
@@ -8,7 +8,34 @@ import Container from "../components/Container";
 import Hero from "../components/Hero";
 import Button from "../components/Button";
 import { SEO } from "../components/SEO";
+import SpeakerImage from "../components/SpeakerImage";
 import SponsorList from "../components/SponsorList";
+import { Speaker } from "../types/speakers";
+
+function getRandomNumber(max: number) {
+  const min = 0;
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+}
+
+function getRandomNumberArray(count: number, max: number) {
+  const returnArray: number[] = [];
+  while (returnArray.length < count) {
+    let randomNum = getRandomNumber(max);
+    if (!returnArray.includes(randomNum)) {
+      returnArray.push(randomNum);
+    }
+  }
+  return returnArray;
+}
+
+const featureSpeakersContainer: React.CSSProperties = {
+  padding: "2rem 0",
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-around",
+  flexWrap: "wrap",
+};
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -65,23 +92,38 @@ const IndexPage: React.FC<PageProps> = () => {
           with years of pent up excitement and energy.
         </p>
 
-        <h3>Call for Speakers</h3>
+        <h3>Featured Speakers</h3>
 
-        <p className="mb-8 mt-8">
-          We are looking for new and experienced speakers that share a love for
-          JavaScript and the Nashville community to present. Our team is
-          available to help create and prepare presentation with speakers.
-        </p>
-        <div
-          style={{ textAlign: "center", width: "100%", marginBottom: "1rem" }}
-        >
-          <Button
-            to="https://www.papercall.io/undergroundjs-2023"
-            style={{ background: "#f78604", color: "#fff" }}
-          >
-            Present
-          </Button>
-        </div>
+        <StaticQuery
+          query={graphql`
+            query GetFeaturedSpeakersPageData {
+              allSpeakersJson {
+                nodes {
+                  name
+                  avatar
+                  title
+                  twitter
+                }
+              }
+            }
+          `}
+          render={(data) => {
+            const speakerList: Partial<Speaker>[] = data.allSpeakersJson.nodes;
+            const featureSpeakerCount = 4;
+            const randomNums = getRandomNumberArray(
+              featureSpeakerCount,
+              speakerList.length
+            );
+            const speakerComponents = speakerList
+              .filter((_, index) => randomNums.includes(index))
+              .map((speaker) => (
+                <SpeakerImage key={speaker.name} {...speaker} />
+              ));
+            return (
+              <div style={featureSpeakersContainer}>{speakerComponents}</div>
+            );
+          }}
+        />
       </Container>
       <SponsorList />
       <Footer />
