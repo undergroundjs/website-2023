@@ -1,4 +1,4 @@
-// Fixes the TS error on LogoLarge import on the index.tsx page
+// Fixes the TS error on svg imports
 declare module "*.svg" {
   const value: any;
   export default value;
