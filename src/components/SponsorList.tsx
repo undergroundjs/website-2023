@@ -1,7 +1,10 @@
 import React from "react";
 import * as SponsorLogos from "../images/sponsors";
 
-const sponsors = [{ name: "Vaco", logo: SponsorLogos.Vaco }];
+const sponsors = [
+  { name: "Pluralsight", logo: SponsorLogos.Pluralsight },
+  { name: "Vaco", logo: SponsorLogos.Vaco },
+];
 
 const SponsorList: React.FC<{}> = () => {
   return (
