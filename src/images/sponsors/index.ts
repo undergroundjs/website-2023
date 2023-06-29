@@ -1,4 +1,4 @@
-import PluralsightLogo from "./Pluralsight-Logo-Horizontal-Color-Linear-sm.png.png";
+import PluralsightLogo from "./Pluralsight-Logo-Horizontal-Color-Fill.jpeg";
 import VacoLogo from "./Vaco.svg";
 
 export const Pluralsight = PluralsightLogo;
