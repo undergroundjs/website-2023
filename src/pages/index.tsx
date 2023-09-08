@@ -63,69 +63,26 @@ const IndexPage: React.FC<PageProps> = () => {
               fontWeight: "bold",
               fontSize: "1.2rem",
             }}
-          >
-            <h3>Sept 21, 2023</h3>
-            <p>Rocketown</p>
-            <p>Nashville</p>
-          </div>
-          <div
-            className="flex-auto"
-            style={{
-              borderLeft: "1px solid black",
-              flex: "1 1 0",
-              padding: "2rem 0",
-              textAlign: "center",
-            }}
-          >
-            <Button to="https://www.eventbrite.com/e/595969038437/">
-              Register
-            </Button>
-          </div>
+          ></div>
         </div>
       </Hero>
       <Container>
-        <h3>UndergroundJS is excited to be back!</h3>
+        <h3>UndergroundJS has been cancelled indefinitely.</h3>
 
         <p className="mb-8 mt-8">
-          After a successful inaugural event in 2019, UndergroundJS went on
-          hiatus due to the COVID-19 pandemic. We are excited to return in 2023
-          with years of pent up excitement and energy.
+          It is with a heavy heart that we are announcing that we will be
+          cancelling UndergroundJS indefinitely.{" "}
         </p>
-
-        <h3>Featured Speakers</h3>
-
-        <StaticQuery
-          query={graphql`
-            query GetFeaturedSpeakersPageData {
-              allSpeakersJson {
-                nodes {
-                  name
-                  avatar
-                  title
-                  twitter
-                }
-              }
-            }
-          `}
-          render={(data) => {
-            const speakerList: Partial<Speaker>[] = data.allSpeakersJson.nodes;
-            const featureSpeakerCount = 4;
-            const randomNums = getRandomNumberArray(
-              featureSpeakerCount,
-              speakerList.length
-            );
-            const speakerComponents = speakerList
-              .filter((_, index) => randomNums.includes(index))
-              .map((speaker) => (
-                <SpeakerImage key={speaker.name} {...speaker} />
-              ));
-            return (
-              <div style={featureSpeakersContainer}>{speakerComponents}</div>
-            );
-          }}
-        />
+        <p className="mb-8 mt-8">
+          Due to low funding and ticket sales, we will not be able to meet our
+          goals necessary to proceed.
+        </p>
+        <p className="mb-8 mt-8">
+          We still highly believe in and support the Nashville community and
+          hope that one day we can gather again to celebrate all the amazing
+          things that are happening here.
+        </p>
       </Container>
-      <SponsorList />
       <Footer />
     </Layout>
   );

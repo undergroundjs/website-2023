@@ -33,11 +33,11 @@ const setMenuBasedOnWindow = (
 
 const menuItems = [
   { text: "Home", url: "/" },
-  { text: "About", url: "/about" },
-  { text: "Speakers", url: "/speakers" },
+  // { text: "About", url: "/about" },
+  // { text: "Speakers", url: "/speakers" },
   // { text: "Venue", url: "/venue" },
-  { text: "Sponsors", url: "/sponsoring" },
-  { text: "CFP", url: "https://www.papercall.io/undergroundjs-2023" },
+  // { text: "Sponsors", url: "/sponsoring" },
+  // { text: "CFP", url: "https://www.papercall.io/undergroundjs-2023" },
   // { text: "Schedule", url: "/schedule" },
   // { text: "Faq", url: "/faq" },
   // { text: "Contact", url: "/contact" },
