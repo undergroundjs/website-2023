@@ -83,7 +83,6 @@ const IndexPage: React.FC<PageProps> = () => {
           things that are happening here.
         </p>
       </Container>
-      <SponsorList />
       <Footer />
     </Layout>
   );
